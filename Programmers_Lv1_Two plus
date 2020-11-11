@@ -1,0 +1,56 @@
+//5day 20201106 20:00~21:46
+//Lv.1 두개 뽑아서 더하기
+//이클립스 버전
+import java.util.Arrays;
+public class P_1 {
+	public static void main(String[] args) {
+		int[] array = {5,0,2,7};
+		int[] tmp = new int [100];
+		int answer_length = 1;
+		int i = 0;
+		int count = 1;
+		int j = 0;
+		Arrays.sort(array);
+		tmp[0] = array[0]+array[1];
+		for (i=0;i<array.length;i++) {			
+			for(j=i+1;j<array.length;j++) {
+				if(tmp[count-1]<array[i]+array[j]) {						
+					tmp[count] = array[i]+array[j];
+					count++;					
+				}
+			}	
+		}
+		int[] answer = new int[count];
+		for(i=0; i<count; i++) {
+			answer[i]=tmp[i];
+			System.out.print(answer[i]);
+		}
+	}
+}
+-------------------------------------------------------
+//프로그래머스 버전
+import java.util.Arrays;
+
+class Solution {
+ public int[] solution(int[] numbers) {
+     int i = 0;
+     int j = 0;
+     int[] tmp = new int [100];
+     int count =1;
+     Arrays.sort(numbers);
+     tmp[0] = numbers[0]+numbers[1];
+     for(i=0; i<numbers.length; i++) {
+         for(j=i+1; j<numbers.length;j++) {
+            if(tmp[count-1] < numbers[i]+numbers[j]) {					
+					tmp[count] = numbers[i]+numbers[j];
+					count++;
+				}
+         }
+     }
+     int[] answer = new int[count];
+		for(i=0; i<count; i++) {
+			answer[i]=tmp[i];
+     }
+     return answer;
+ }
+}
