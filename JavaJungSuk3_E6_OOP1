@@ -253,3 +253,58 @@ class Marine {
 		this.y=y;
 	}
 }
+-----------------------------------------------
+//10days 20201111
+//문제를 구현해 보았음.
+/*[6-10] 다음 중 생성자에 대한 설명으로 옳지 않은 것은?
+	a. 모든 생성자의 이름은 클래스에 이름과 동일해야 한다.
+	b. 생성자는 객체를 생성하기 위한 것이다.
+	c. 클래스에는 생성자가 반드시 하나 이상 있어야 한다.
+	d. 생성자가 없는 클래스는 컴파일러가 기본 생성자를 추가한다.
+	e. 생성자는 오버로딩 할 수 없다.
+	정답 : 
+	해설을 원하시면 0, 종료를 원하시면 아무키나 입력하세요 : 
+*/
+	
+
+package Exercise6;
+import java.util.Scanner;
+public class E6_10 {
+	 public static void main(String[] args) {
+		 final String QUESTION = "Q. 다음 중 생성자에 대한 설명으로 옳지 않은 것을 모두 고르시오?";
+		 final String EXAMPLEA = " a. 모든생성자의 이름은 클래스의 이름과 동일해야 한다.";
+		 final String EXAMPLEB = " b. 생성자는 객체를 생성하기 위한 것이다.";
+		 final String EXAMPLEC = " c. 클래스에는 생성자가 반드시 하나 이상 있어야 한다.";
+		 final String EXAMPLED= " d. 생성자가 없는 클래스는 컴파일러가 기본 생성자를 추가한다.";
+		 final String EXAMPLEE= " e. 생성자는 오버로딩 할 수 없다.";
+		 String answer = "";
+		 System.out.printf("%s%n %s%n %s%n %s%n %s%n %s%n",QUESTION, EXAMPLEA,EXAMPLEB,EXAMPLEC,EXAMPLED,EXAMPLEE);
+		 Scanner scanner = new Scanner(System.in);
+		 System.out.print(" 정답 : ");
+		 answer = scanner.nextLine();
+		 int count = 0;
+		 String[] RightAnswer = {"b,e", "b, e","B,E", "B, E", "E,B","E, B","e,b","e, b"};
+		 for(int i=0; i<RightAnswer.length; i++) {
+			 if (answer.equals(RightAnswer[i])) {
+				 System.out.println("정답입니다.");
+				 count++;
+				 break;				 
+			 }
+		 }
+		if(count==0) {
+			System.out.println("오답입니다.");
+		}
+		 System.out.printf("해설을 원하시면 0, 종료를 원하시면 아무키나 입력하세요 : ");		 
+		 int Choice = scanner.nextInt();
+		 scanner.close();
+		 if(Choice==0) {
+			 System.out.printf
+			 ("b.생성자는 객체를 생성하기 위한 것이다. %n→ 생성자는 객체를 생성할 때 사용되기는 하지만, "
+			  + "객체를 초기화할 목적으로 사용되는 것이다." + "%ne.생성자는 오버로딩 할 수 없다. %n→ "
+			  +"객체를 생성하는 것은 new연산자이다.생성자는 오버로딩 할 수 없다.");
+		 }
+		 else
+			 System.exit(0);
+	 }
+}
+
