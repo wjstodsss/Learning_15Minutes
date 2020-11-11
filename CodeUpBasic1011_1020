@@ -1,0 +1,67 @@
+//9days 20201110
+//CodeUp1011
+//문자형으로 변수를 하나 선언하고, 변수에 문자를 저장한후 변수 출력하기
+import java.util.Scanner;
+
+public class java1011 {
+	public static void main(String[] args) {
+		char a;
+		Scanner s = new Scanner(System.in);
+		a = s.next().charAt(0);
+		System.out.printf("%c",a);
+		s.close();
+	}
+}
+//CodeUp1012
+//실수 1개를 입력 받아 그대로 출력하기
+import java.util.Scanner;
+public class java1012 {
+	public static void main(String[] args) {
+		float f ;
+		Scanner s = new Scanner(System.in);
+		f = s.nextFloat();
+		System.out.printf("%f", f);
+		s.close();
+	}
+}
+//CodeUp1013
+//정수 2개를 입력 받아 그대로 출력하기
+import java.util.Scanner;
+public class java1013 {
+	public static void main(String[] args) {
+		int i,j ;
+		Scanner s = new Scanner(System.in);
+		i = s.nextInt();
+		j = s.nextInt();
+		System.out.printf("%d %d", i,j);
+		s.close();
+	}
+}
+//CodeUp1014
+//2개의 문자(ASCII CODE)를 입력받아서 순서를 바꿔 출력하기
+import java.util.Scanner;
+public class java1014 {
+	public static void main(String[] args) {
+		char a, b;
+		Scanner scanner = new Scanner(System.in);
+		a = scanner.next().charAt(0);
+		b = scanner.next().charAt(0);
+		System.out.printf("%c %c", b, a);
+		scanner.close();	
+	}
+}
+//CodeUp1015
+//실수 1개를 입력 받아 소수점 셋 째자리에서 반올림 하여 소수점 이하 둘째자리까지 출력하기
+import java.util.Scanner;
+public class java1015 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		float f = scanner.nextFloat();
+		System.out.printf("%.2f", f);
+		scanner.close();
+	}
+}
+
+
+
+
