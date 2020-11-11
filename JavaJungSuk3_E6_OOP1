@@ -1,0 +1,255 @@
+7day 20201108 20:00~22:45
+//머리속에 안남는거 같은데... 복습을 해야함!!
+//흠 일단 8번까지만
+//코딩테스트 어려움 그래도 희망이 보임 부스트캠프 코테는 하나도 못 풀었는데.. 이번에는 두개나 풀었음!!^0^
+//나머지 문제는 이해가 가는데 풀이를 모르겠음 하루종일 생각해도 모르겠음. 현재는 가진게 미천한가 봄
+//없는건 만들면 됨 걱정 없음, 다 생각이 있음!!
+
+
+//멤버변수를 갖는 SutdaCard클래스를 정의하시오
+/*다음
+타입        변수명        설 명
+int        num        카드의 숫자.(1~10사이의 정수)
+boolean    isKang     광이면 true, 아니면 false
+*/
+package Exercise6;
+class E6_1 {
+	int num;
+	boolean isKwang;
+---------------------------
+//앞서 정의 한 SutdaCard클래스에 두 개의 생성자와 info()를 추가해서 실행결과와 같은 결과를 얻도록 하시오.
+package Exercise6;
+
+public class E6_2 {
+	public static void main(String[] args) {
+		SutdaCard card1 = new SutdaCard(3,false);
+		SutdaCard card2 = new SutdaCard();
+		
+		System.out.println(card1.info());
+		System.out.println(card2.info());
+	}
+}
+class SutdaCard {
+	int num;
+	boolean isKwang;
+	
+	SutdaCard() {
+		this(1, true);
+	}
+	SutdaCard(int num, boolean isKwang) {
+		
+		this.num = num;	
+		this.isKwang = isKwang;
+	}
+	String info() {
+		return num + (isKwang? "K" : "");
+	}
+}
+----------------------------
+//다음과 같은 멤버 변수를 갖는 Student클래스를 정의하시오.
+/*다음
+타입        변수명        설 명
+String     name        학생이름
+int        ban         반
+int        no          번호
+int        kor         국어점수
+int        eng         영어점수
+int        math        수학점수
+*/
+package Exercise6;
+
+public class E6_3 {
+	class sutudent {
+		String name;
+		int ban;
+		int no;
+		int kor;
+		int eng;
+		int math;
+	}
+
+}
+------------------------
+//E6_3에서 정의한 Student클래스에 다음과 같이 정의된 두 개의 메서드 getTotal()과
+//Average()를 추가하시오.
+/*다음
+메서드명 : getTotal
+기능 : 국어, 영어, 수학의 점수를 모두 더해서 반환
+반환타입 : int
+매개변수 : 없음
+
+메서드명 : getAverage
+기능 : 총점을 과목수로 나누어 평균을 구하고 소수점 둘째자리에서 반올림
+반환타입 : float
+매개변수 : 없음
+*/
+package Exercise6;
+
+public class E6_4 {
+	public static void main(String args []) {
+		Student1 s = new Student1();
+		s.name = "홍길동";
+		s.ban = 1;
+		s.no = 1;
+		s.kor = 100;
+		s.eng = 60;
+		s.math = 76;
+		
+		System.out.println("이름:"+s.name);
+		System.out.println("총점:"+s.getTotal());
+		System.out.println("평균:"+s.getAverage());
+		
+	}
+}
+	class Student1 {
+		String name;
+		int ban;
+		int no;
+		int kor;
+		int eng;
+		int math;
+		
+		int getTotal() {
+			return kor + eng + math;
+		}
+		float getAverage() {
+			return (int)(getTotal()/3f*10+0.5f)/10f;
+		}
+	}
+---------------------------
+//다음과 같은 실행결과를 얻도록 Student클래스에 생성자와 info()를 추가하여 작성하시오.
+/*다음
+홍길동,1,1,100,60,76,236,78.7 
+*/
+package Exercise6;
+
+public class E6_5 {
+	public static void main(String args[]) {
+		Student s = new Student("홍길동",1,1,100,60,76);
+		System.out.println(s.info());
+	}
+
+}
+class Student {
+	String name;
+	int ban;
+	int no;
+	int kor;
+	int eng;
+	int math;
+	
+	Student(String name, int ban, int no, int kor, int eng, int math) {
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	int getTotal() {
+		return kor+eng+math;
+	}
+	float getAverage() {
+		return (int)(getTotal()/3f*10+0.5f)/10f;
+	}
+	public String info() {
+		return name+
+				","+ban+
+				","+no+
+				","+kor+
+				","+eng+
+				","+math+
+				","+getTotal()+
+				","+getAverage();
+	}
+}
+------------------------
+//두 점의 거리를 계산하는 getDistance()를 작성하시오.
+package Exercise6;
+
+public class E6_6 {
+	static double getDistance1(int x, int y, int x1, int y1) {
+		return Math.sqrt(Math.pow((x-x1),2)+((y-y1)*(y-y1)));
+	}
+	public static void main(String args[]) {
+		System.out.println(getDistance1(1,1,2,2));
+	}
+}
+-------------------------
+//E6_6에서 작성한 클래스메서드 getDistance()를 MyPoint클래스의 인스턴스메서드로 정의하시오.
+package Exercise6;
+
+class MyPoint {
+	int x;//인스턴스 변수
+	int y;//인스턴스 변수
+	
+	MyPoint(int x,int y) {
+		this.x = x;
+		this.y = y;
+	}
+	double getDistance(int x1, int y1) {
+		return Math.sqrt(Math.pow(x-x1, 2)+Math.pow(y-y1, 2));
+	}
+}
+
+public class E6_7 {
+	public static void main (String args[]) {
+		MyPoint p = new MyPoint(1,1);
+		System.out.println(p.getDistance(2, 2));
+	}
+}
+---------------------------------------
+//다음 코드에 정의된 변수들을 종류별로 구분해서 적으시오.
+package Exercise6;
+class PlayingCard {
+	int kind;
+	int num;
+	static int width;
+	static int height;
+	PlayingCard(int k, int n) {
+		kind = k;
+		num = n;
+	}
+	/*public static void main(String args[]) {
+		PlayingCard card = new PlayingCard(1,1);
+	}*/
+	//원래 이렇게 작성된 코드 였으나 파일명과 달라서 main함수를 밑에 넣었음, 아직 잘모르므로
+	//최대한 원본을 지키고자 함
+}
+public class E6_8 {
+	public static void main(String args[]) {
+		PlayingCard card = new PlayingCard(1,1);
+		System.out.println("-클래스변수(static변수) : width, height");
+		System.out.println("-인스턴스변수 : kind, num");
+		System.out.println("-지역변수 : k, n, card, args");
+	}
+}
+-------------------------------------
+//다음은 컴퓨터 게임의 병사를 클래스로 정의한 것이다. 이 클래스의 멤버 중에 static을 붙여야 하는 것은
+//어떤 것들이고 그 이유는 무엇인가??
+
+package Exercise6;
+
+public class E6_9 {
+public static void main(String[] args) {	
+	System.out.println("weapon, armon - 모든 Maringe인스턴스에 대해 동일한 값이어야 하므로");
+	System.out.println("weaponUp(), armorUp() - static 변수에 대한 작업을 하는 메서드이므로");
+
+	}
+}
+class Marine {
+	int x=0, y=0;
+	int hp=60;
+	static int weapon=6;
+	static int armor=0;
+	static void weaponUp() {
+		weapon++;
+	}
+	static void armorUp() {
+		armor++;
+	}
+	void move(int x, int y) {
+		this.x=x;
+		this.y=y;
+	}
+}
