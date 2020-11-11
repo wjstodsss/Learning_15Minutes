@@ -1,0 +1,62 @@
+// 8days 20201109 5:40~5:55
+//Code1001
+public class Java1001 {
+	public static void main(String[] args) {
+		System.out.printf("Hello");
+	}
+}
+//Code1002
+//Hello World출력하기
+//실행결과 Hello World
+public class Java1002 {
+	public static void main(String[] args) {
+		System.out.printf("Hello World");
+	}
+}
+//Code1003
+/*
+Hello
+World출력하기
+실행결과
+Hello
+World*/
+public class Java1003 {
+	public static void main(String[] args) {
+		System.out.printf("Hello%nWorld");
+	}
+}
+//Code1004
+//'Hello'출력하기
+public class Java1004 {
+	public static void main(String[] args) {
+		System.out.printf("\'Hello\'");
+	}
+}
+//Code1005
+//"Hello" 출력하기
+public class Java1005 {
+	public static void main(String[] args) {
+		System.out.printf("\"Hello\"");
+	}
+}
+//Code1006
+//"!@#$%^&*()"(단, 큰따옴표도 함께 출력한다.)
+public class Java1006 {
+	public static void main(String[] args) {
+		System.out.printf("\"!@#$%%^()\"");
+	}
+}
+//Code1007
+//"C:\Download\hello.cpp" (단, 큰따옴표도 함께 출력한다.)
+public class Java1007 {
+	public static void main(String[] args) {
+		System.out.printf("\"C:\\Download\\hello.cpp\"");
+	}
+}
+//Code1008
+public class Java1008 {
+	public static void main(String[] args) {
+		System.out.printf("┌┬┐%n├┼┤%n└┴┘");
+	}
+
+}
