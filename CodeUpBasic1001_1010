@@ -1,4 +1,4 @@
-// 8days 20201109 5:40~5:55
+// 8days 20201109
 //CodeUp1001
 //Hello출력하기
 //실행결과 Hello
@@ -62,6 +62,7 @@ public class Java1008 {
 	}
 
 }
+//9days 20201110
 //CodeUp1010
 //정수형으로 변수를 선언하고, 변수에 정수값을 저장한 후 변수에 저장되어 있는 값을 출력하기
 import java.util.Scanner;
