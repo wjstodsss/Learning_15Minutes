@@ -1,11 +1,13 @@
 // 8days 20201109 5:40~5:55
-//Code1001
+//CodeUp1001
+//Hello출력하기
+//실행결과 Hello
 public class Java1001 {
 	public static void main(String[] args) {
 		System.out.printf("Hello");
 	}
 }
-//Code1002
+//CodeUp1002
 //Hello World출력하기
 //실행결과 Hello World
 public class Java1002 {
@@ -13,7 +15,7 @@ public class Java1002 {
 		System.out.printf("Hello World");
 	}
 }
-//Code1003
+//CodeUp1003
 /*
 Hello
 World출력하기
@@ -25,38 +27,53 @@ public class Java1003 {
 		System.out.printf("Hello%nWorld");
 	}
 }
-//Code1004
+//CodeUp1004
 //'Hello'출력하기
 public class Java1004 {
 	public static void main(String[] args) {
 		System.out.printf("\'Hello\'");
 	}
 }
-//Code1005
+//CodeUp1005
 //"Hello" 출력하기
 public class Java1005 {
 	public static void main(String[] args) {
 		System.out.printf("\"Hello\"");
 	}
 }
-//Code1006
+//CodeUp1006
 //"!@#$%^&*()"(단, 큰따옴표도 함께 출력한다.)
 public class Java1006 {
 	public static void main(String[] args) {
 		System.out.printf("\"!@#$%%^()\"");
 	}
 }
-//Code1007
+//CodeUp1007
 //"C:\Download\hello.cpp" (단, 큰따옴표도 함께 출력한다.)
 public class Java1007 {
 	public static void main(String[] args) {
 		System.out.printf("\"C:\\Download\\hello.cpp\"");
 	}
 }
-//Code1008
+//CodeUp1008
 public class Java1008 {
 	public static void main(String[] args) {
 		System.out.printf("┌┬┐%n├┼┤%n└┴┘");
 	}
 
 }
+//CodeUp1010
+//정수형으로 변수를 선언하고, 변수에 정수값을 저장한 후 변수에 저장되어 있는 값을 출력하기
+import java.util.Scanner;
+
+public class java1010 {
+	public static void main(String[] args) {	
+		int i;
+		Scanner s = new Scanner(System.in);
+		i = s.nextInt();
+		System.out.printf("%d", i);
+		s.close();
+	}
+}
+
+
