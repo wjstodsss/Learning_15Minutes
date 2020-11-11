@@ -61,7 +61,32 @@ public class java1015 {
 		scanner.close();
 	}
 }
+// 10days 20201111
+//CodeUp1017
+//int형 정수 1개를 입력받아 공백을 사이에 두고 3번 출력하기
+import java.util.Scanner;
 
-
-
+public class java1017 {
+	public static void main(String[] args) {
+		int i;
+		Scanner scanner = new Scanner(System.in);
+		i = scanner.nextInt();
+		System.out.printf("%d %d %d", i,i,i);
+		scanner.close();
+	}
+}
+//CodeUp1018
+//어떤 형식에 맞추어 시간이 입력될 때, 그대로 출력하기
+//더 알아 봐야 할 듯 c언어에서의 scanf("%d:%d", &x, &y); 이것을 자바에서는 못찾았음 일단대기
+import java.util.Scanner;
+public class java1018 {
+	public static void main (String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		int hh = scanner.nextInt();
+		int mm = scanner.nextInt();
+		System.out.printf("%d:%d",hh,mm);
+		scanner.close();
+	}
+}
 
