@@ -78,6 +78,7 @@ public class java1017 {
 //CodeUp1018
 //어떤 형식에 맞추어 시간이 입력될 때, 그대로 출력하기
 //더 알아 봐야 할 듯 c언어에서의 scanf("%d:%d", &x, &y); 이것을 자바에서는 못찾았음 일단대기
+//+1019에서는 발전 되었음!!!!!!!!!!!!!
 import java.util.Scanner;
 public class java1018 {
 	public static void main (String[] args) 
@@ -89,4 +90,35 @@ public class java1018 {
 		scanner.close();
 	}
 }
+//11days 20201112 이것만 2시간이 걸리다니 기부니가 좋다 ㅎㅎ
+//CodeUp1019
+//년, 월, 일을 입력받아 지정된 형식 yyyy.mm.dd 으로 출력하기
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class java1019 {
+	public static void main(String[] args) {
+		String Date = "";
+		Scanner scanner = new Scanner(System.in);
+		Date = scanner.nextLine();
+		if(Date.length()==9 || Date.length()==8) {
+			StringTokenizer tokenizer =  new StringTokenizer(Date,".");
+				String tmp = tokenizer.nextToken();
+				System.out.print(tmp);
+					
+				for(int i=0; i<2;i++) {
+					tmp = tokenizer.nextToken();
+					if(tmp.length()!=2) {
+						System.out.print("."+"0"+tmp);
+					}
+					else {
+						System.out.print(tmp);
+					}
+				}
+			}
+		else {
+			System.out.printf(Date+","+Date.length());
+		}
+		scanner.close();	
+	}
 
+}
