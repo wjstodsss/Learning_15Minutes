@@ -122,3 +122,52 @@ public class java1019 {
 	}
 
 }
+//11days 20201112
+//CodeUp1019
+//년, 월, 일을 입력받아 지정된 형식 yyyy.mm.dd 으로 출력하기
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class java1019 {
+	public static void main(String[] args) {
+		String Date = "";
+		Scanner scanner = new Scanner(System.in);
+		Date = scanner.nextLine();
+		if(Date.length()==9 || Date.length()==8) {
+			StringTokenizer tokenizer =  new StringTokenizer(Date,".");
+					String tmp = tokenizer.nextToken();
+					System.out.print(tmp);
+					
+					for(int i=0; i<2;i++) {
+						tmp = tokenizer.nextToken();
+						if(tmp.length()!=2) {
+							System.out.print("."+"0"+tmp);
+						}
+						else {
+							System.out.print("."+tmp);
+						}
+					}
+			}
+		else {
+			System.out.printf(Date+","+Date.length());
+		}
+		scanner.close();	
+	}
+}
+//12days 20201113
+//CodeUp1020
+//'-'이 포함된 상태로 주민번호를 입력 받아 '-'이 없는 상태로 이어 출력하기
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class java1020 {
+	public static void main(String[] args) {
+		String IdentityNumber = "";
+		Scanner scanner = new Scanner(System.in);
+		IdentityNumber = scanner.nextLine();
+		StringTokenizer tokenizer = new StringTokenizer(IdentityNumber,"-");
+		System.out.println(tokenizer.nextToken()+tokenizer.nextToken());
+		scanner.close()
+	}
+
+}
+
+
