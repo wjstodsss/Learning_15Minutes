@@ -1,0 +1,49 @@
+//Programmers_Lv1_Two plus
+//12day 20201113
+//3진법 뒤집기 : 10진수 정수를 받아서 3진수로 변형한 후 앞뒤를 뒤집은 뒤 다시 십진수로 리턴하기
+//예 n=45 result=7
+//과정 45 -> 1200(3) -> 0021(3) -> 7
+//이클립스 버전
+import java.lang.Math;
+import java.util.Stack;
+public class P_Lv1_TernaryFlip {
+	public static void main(String[] args) {
+		int Dividend=11;
+		int DividendReference=Dividend;
+		int Divisor=3;
+		int answer=0;
+		Stack<Integer> stack = new Stack<Integer>();
+		for (int i=0; DividendReference>=Math.pow(Divisor,i);i++) {
+			stack.push(Dividend%Divisor);
+			Dividend=Dividend/Divisor;
+		}
+		for (int i=0; i<stack.size()+i;i++) {		
+			answer += stack.lastElement()*(int)Math.pow(Divisor,i);		
+			System.out.println(stack.lastElement());
+			System.out.println((int)Math.pow(Divisor,i));
+			System.out.println(answer);
+			stack.pop();
+		}
+	}
+	// Base_Conversion 
+}
+//프로그래머스 버전
+import java.lang.Math;
+import java.util.Stack;
+class Solution {
+    public int solution(int Dividend) {
+		int DividendReference=Dividend;
+		int Divisor=3;
+		int answer=0;
+		Stack<Integer> stack = new Stack<Integer>();
+		for (int i=0; DividendReference>=Math.pow(Divisor,i);i++) {
+			stack.push(Dividend%Divisor);
+			Dividend=Dividend/Divisor;
+		}
+		for (int i=0; i<stack.size()+i;i++) {		
+			answer += stack.lastElement()*(int)Math.pow(Divisor,i);		
+			stack.pop();
+		}
+        return answer;
+    }
+}
