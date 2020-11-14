@@ -1,0 +1,81 @@
+// 13days 20201114
+//CodeUp1021
+//단어를 입력받아 그대로 출력하기
+import java.util.Scanner;
+
+public class java1021 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String Word = "";
+		Word = scanner.nextLine();
+		System.out.printf("%s", Word);
+		scanner.close();
+		
+	}
+}
+//CodeUp1022
+//공백 문자가 포함되어 있는 문장을 입력받고 그대로 출력하기
+import java.util.Scanner;
+
+public class java1022 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String Word = "";
+		Word = scanner.nextLine();
+		System.out.printf("%s", Word);
+		scanner.close();
+		
+	}
+}
+//CodeUp1023
+//실수 1개를 입력받아 정수부분과 실수부분으로 나누어 출력하기
+import java.util.StringTokenizer;
+import java.util.Scanner;
+public class java1023 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		double x = scanner.nextDouble();
+		String s = String.valueOf(x);
+		StringTokenizer tokenizer = new StringTokenizer(s,".");
+		System.out.println(tokenizer.nextToken());	
+		System.out.println(tokenizer.nextToken());
+		scanner.close();
+	}
+}
+//CodeUp1024
+//단어를 1개 입력받아 나누어 출력하기
+import java.util.Scanner;
+public class java1024 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String Words = "";
+		Words = scanner.nextLine();
+		for(int i =0; i<Words.length();i++) {
+			System.out.println(Words.charAt(i));
+		}
+		scanner.close();
+	}
+}
+//CodeUp1025
+//정수 1개 입력받아 각 자리 별로 나누어 출력하기
+//예 n=75432 
+import java.util.Stack;
+import java.util.Scanner;
+public class java1025 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int n = scanner.nextInt();
+		Stack<Integer> stack = new Stack<Integer>();
+		for(int i=0;Math.pow(10, i)<n;i++) {
+			stack.push((int)(n%Math.pow(10, i)));
+		}
+		int StackSize=stack.size();
+		for(int i=0;i<StackSize;i++) {
+			System.out.println(n-stack.peek());
+			n=stack.peek();
+			stack.pop();			
+		}
+		scanner.close();
+	}
+}
+
