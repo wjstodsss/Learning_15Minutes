@@ -1,0 +1,24 @@
+//13days 20201114
+//Lv.1 내적(두 벡터를 표준기저벡터로 나타내었을 때 각 성분끼리의 곱의 합으로 스칼라 곱이라고 함.) 구하기
+//이클립스 버전
+public class P_Lv1_InnerProduct {
+	public static void main(String[] args) {
+		int[] a = { 1,2,3,4};
+		int[] b = {-3,-1,0,2};
+		int answer = 0;
+		for(int i=0; i<a.length; i++) {
+			answer+=a[i]*b[i];
+		}
+		System.out.println(answer);
+	}
+}
+//프로그래머스 버전
+class Solution {
+    public int solution(int[] a, int[] b) {
+        int answer = 0;
+        for(int i=0; i<a.length;i++){
+            answer+=a[i]*b[i];
+        }
+        return answer;
+    }
+}
