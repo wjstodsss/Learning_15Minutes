@@ -1,0 +1,13 @@
+//16days 20201117
+//
+//10진수 정수하나를 입력받아 8진수로 출력하기
+import java.util.Scanner;
+
+public class Java1031 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int decimal = scanner.nextInt();
+		System.out.printf("%o", decimal);
+		scanner.close();
+	}
+}
