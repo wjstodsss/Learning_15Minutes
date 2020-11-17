@@ -1,0 +1,40 @@
+16days 20201117
+//리눅스 설치(출처 : 양주종선생님의 코딩스쿨 - 리눅스 기초 실습 강좌(20190206영상))
+1. VirtualBox 다운로드
+ - www.virtualbox.org
+2. CentOS7-minimal 다운로드
+ - www.centos.org
+3. VirtualBox default 값으로 설치
+4. VirtualBox 실행
+5. 새로 만들기
+ - 이름 : CentOS7
+ - default 값으로 설치
+6. 설정 → 저장소 → 컨트롤러IDE(비어있음) 클릭 → 우측 속성에 CD모양 클릭 후 다운받은 이미지 마운트 후 확인
+7. 시작 → 리눅스부팅화면 → CentOS7 install
+8. VirtualBox 실행창 → 파일 → 환경설정 → 입력 → 가상머신 → 호스트 키 조합 단축키 f12로 설정(실행창에서 마우스 아웃)
+9. CentOS7 설치
+ - 한국어 설정 
+ - KDUMP 끔 → 설치대상 default 값으로 파티션 설정 → 네트워크 및 호스트명(이더넷 켬) → 보안설정 끔 
+ - install 진행 (ROOT암호, 사용자 생성 진행)
+ - 재부팅
+10. 리눅스 창에서 ROOT 암호 및 사용자 생성 확인
+ localhost login: root
+ Password: 비밀번호 입력 보이지 않음
+ Last login: Tue Nov 17 13:27:33 on tty1
+ [root@localhost ~]# 명령어 입력 whoami
+ root 출력
+ [root@localhost ~]# exit입력
+ localhost login: j
+ Password: 비밀번호 입력 보이지 않음
+ Last login: Tue Nov 17 14:02:39 on tty1
+ [j@localhost ~]# 명령어 입력 whoami
+ j 출력
+ [j@localhost ~]# exit입력
+ 설치 완료 ^0^ 다음부터는 동영상 안봐도 됨
+ 단축키 
+ Ctrl + c 프로세스 강제 종료 
+ Ctrl + d로그인 화면 이동
+ 명령어
+ df -h : 하드디스크 파티션 정보
+ rpm -qa | nl : package 설치 수
+ 
