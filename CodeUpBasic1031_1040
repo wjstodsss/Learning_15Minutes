@@ -1,5 +1,5 @@
 //16days 20201117
-//
+//CodeUp1031
 //10진수 정수하나를 입력받아 8진수로 출력하기
 import java.util.Scanner;
 
@@ -11,3 +11,52 @@ public class Java1031 {
 		scanner.close();
 	}
 }
+//CodeUp1032
+//10진수 정수하나를 입력받아 16진수로 출력하기
+import java.util.Scanner;
+
+public class Java1032 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int decimal = scanner.nextInt();
+		System.out.printf("%x", decimal);
+		scanner.close();
+	}
+}
+//CodeUp1033
+//10진수 정수하나를 입력받아 16진수로 대문자 출력하기
+import java.util.Scanner;
+
+public class Java1033 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int decimal = scanner.nextInt();
+		System.out.printf("%X", decimal);
+		scanner.close();
+	}
+}
+//CodeUp1034
+//8진수 정수하나를 입력받아 10진수로 출력하기
+import java.util.Scanner;
+
+public class Java1034 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String octalNumber = scanner.next();
+		System.out.print(Integer.valueOf(octalNumber,8));
+		scanner.close();
+	}
+}
+//CodeUp1035
+//16진수 정수하나를 입력받아 8진수로 출력하기
+import java.util.Scanner;
+
+public class Java1035 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String octalNumber = scanner.next();
+		System.out.printf(Integer.toOctalString(Integer.valueOf(octalNumber,16)));
+		scanner.close();
+	}
+}
+
