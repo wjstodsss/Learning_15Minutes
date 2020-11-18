@@ -1,5 +1,8 @@
 17days 20201118
 //v1.1
+//bug001매개변수 numbers={5}와 오른손잡이 hand="right"가 입력 되었을 때 목표값 "R"대신 "L" 출력됨-해결
+//bug002테스트 케이스{8,0} 입력시 목표값 "RR" 결과값 "RL"로 결과 값 상이-해결
+//프로그래머스 채점 통과
 //이클립스 버전
 import java.util.Arrays;
 public class P_Lv1_TouchTheKeypad {
@@ -58,10 +61,10 @@ public class P_Lv1_TouchTheKeypad {
 	}
 }
 //16days 20201117
-//이클립스와 프로그래머스의 결과값이 다른 경우가 발생함 애쓰는 중
-//이클립스LRLLLRLLRRL 프로그래머스 LRLLLLLLRRL
-//이클립스 버전
-//v1.0
+//v1.1
+//bug001매개변수 numbers={5}와 오른손잡이 hand="right"가 입력 되었을 때 목표값 "R"대신 "L" 출력됨
+//bug002테스트 케이스{8,0} 입력시 목표값 "RR" 결과값 "RL"로 결과 값 상이
+//프로그래머스 채점 통과
 import java.util.Arrays;
 public class P_Lv1_TouchTheKeypad {
 
