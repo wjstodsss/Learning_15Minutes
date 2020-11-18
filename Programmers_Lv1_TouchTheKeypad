@@ -1,7 +1,67 @@
+17days 20201118
+//v1.1
+//이클립스 버전
+import java.util.Arrays;
+public class P_Lv1_TouchTheKeypad {
+
+	public static void main(String[] args) {
+		int[] numbers = {1,3,4,5,8,2,1,4,5,9,5};
+		String hand = "right";
+		String answer = "";		
+		int[] horizontalPad = {0,1,2,3,4,5,6,7,8,9,10,11};
+		int[] verticalPad = {0,2,5,8};
+		int[][] distance = {
+				{0,3,2,1},
+				{4,1,2,3},
+				{3,0,1,2},
+				{4,1,2,3},
+				{3,2,1,2},
+				{2,1,0,1},
+				{3,2,1,2},
+				{2,3,2,1},
+				{1,2,1,0},
+				{2,3,2,1},
+				{1,4,3,2},
+				{1,4,3,2}
+				
+		};
+		for(int i=0, L=10, R=11; i<numbers.length; i++) {
+			if(numbers[i]!=0 &&numbers[i]!=2 && 28%numbers[i]==0) {
+				L = numbers[i];
+				answer+="L";			
+			}
+			else if(numbers[i]!=0 && numbers[i]!=2 && 18%numbers[i]==0) {
+				R = numbers[i];
+				answer+="R";	
+			}
+			else {
+				int indexRightPad = Arrays.binarySearch(horizontalPad,R);
+				int indexLeftPad = Arrays.binarySearch(horizontalPad,L);
+				int indexCenterPad = Arrays.binarySearch(verticalPad,numbers[i]);
+				
+				if(distance[indexRightPad][indexCenterPad]==distance[indexLeftPad][indexCenterPad] && hand.equals("right")) {
+					R = numbers[i];
+					
+					answer+="R";
+				}
+				else if(distance[indexRightPad][indexCenterPad]<distance[indexLeftPad][indexCenterPad]) {
+						R = numbers[i];
+						answer+="R";
+				}
+				else {
+						L = numbers[i];
+						answer+="L";					
+				}
+			}
+		}
+		System.out.print(answer);
+	}
+}
 //16days 20201117
 //이클립스와 프로그래머스의 결과값이 다른 경우가 발생함 애쓰는 중
 //이클립스LRLLLRLLRRL 프로그래머스 LRLLLLLLRRL
 //이클립스 버전
+//v1.0
 import java.util.Arrays;
 public class P_Lv1_TouchTheKeypad {
 
