@@ -1,0 +1,40 @@
+ssh-server, 원격접속
+
+
+웹서버(아파치) / 웹 클라이언트(브라우저)
+ssh-server    / putty
+서버          / 클라이언트
+
+ssh-server 설치 확인/시작
+# rpm -qa | nl
+- 내컴퓨터에 설치되어 있는 package 확인
+# rpm -qa | grep ssh
+- ssh가 설치 되어 있는지 확인
+- openssh-server
+- 없으면 다운 받아 설치
+# ps -ef | grep ssh
+- ssh가 실행 중인지 확인
+- /user/sbin/sshd -D
+# ssh root@localhost
+- 내 컴퓨터에서 내가 나한테 접속
+- password 입력
+putty 접속 준비 작업 (포트를 열어줌)
+- virtualBox관리자 설정/네트워크/고급/포트포워딩/플러스클릭/호스트포트 22입력, 게스트포트 22입력 후 확인
+putty 실행
+- putty.exe(the SSH and Telnet client itself) 64-bit download
+- 실행 후 Host Name (or IP address)란에 127.0.0.1 입력 후 open
+- 메시지 박스 발생시 yes선택
+- root 로그인
+putty 세션 복사
+- putty 제목표시줄 우클릭/ Duplicate Session
+//Duplicate Session 복제 세션(대화 처리 등에 있어서의 대화의 한 단위/클라이언트와 서버의 논리적인 결합관계에 있는 시간) 
+포트열기
+- j 로그인
+putty 폰트 바꾸기(폰트, 폰트크기 등등 변경)
+- putty 제목표시줄 우클릭/ Change Setting/Window/Appearance 클릭/Font settings/Change 클릭후 글꼴변경
+접속자 확인 명령어(putty 실행창)
+- who
+나는 누구인지 확인 명령어(putty 실행창)
+- whoami
+접속 끝내기 명령어
+- exit
