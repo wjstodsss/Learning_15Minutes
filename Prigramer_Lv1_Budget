@@ -1,0 +1,50 @@
+18days 20201119
+//S사의 예산(int budget)과 각 부서별 신청 금액(int[] d)이 매개 변수로 주어질 때 최대 지원 가능 부서의 수 구하기
+//단, 정확히 신청 금액 만큼만 지원 가능함 50원을 신청한 경우 50원외에 어떤 금액도 지원 불가
+/*의사코드
+부서별 신청금액을 정렬/최대한 많은 부서에 지원해야 하므로 가장 낮은 금액부터 지원 하기 위함
+가장 낮은 신청금액부터 누적하여 합산함/ 단, 누적액이 예산을 초과 할 수 없음, 누적수를 카운트함
+누적 횟수를 리턴함/ 누적 횟수 = 예산을 지원받은 부서 수
+*/
+//이클립스 버전
+import java.util.Arrays;
+
+public class P_Lv1_Budget {
+
+	public static void main(String[] args) {
+		int[] d = {1,33};
+		int budget = 9;
+		int answer=0;
+		Arrays.sort(d);
+		for(int i = 0,sum=0; i<d.length ; i++) {
+			sum+=d[i];
+			if(sum<=budget) {
+				answer++;			
+			}
+			else {
+				break;
+			}
+			System.out.println(sum);
+		}
+		System.out.println(answer);
+	}
+
+}
+//프로그래머스 버전
+import java.util.Arrays;
+class Solution {
+    public int solution(int[] d, int budget) {
+        int answer = 0;
+        Arrays.sort(d);
+		for(int i = 0,sum=0; i<d.length ; i++) {
+			sum+=d[i];
+			if(sum<=budget) {
+				answer++;			
+			}
+			else {
+				break;
+			}
+		}
+        return answer;
+    }
+}
